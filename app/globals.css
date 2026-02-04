@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "animate.css";
 
 :root {
   --background: #ffffff;
@@ -10,6 +11,23 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Colors */
+  --color-charcoal: #1A1A1A;
+  /* Fondo alterno */
+  --color-gray-light: #CFCFCF;
+  /* Texto secundario */
+  --color-gray-medium: #333333;
+  /* Líneas / divisores */
+
+  --color-brand-yellow: #FFD400;
+  /* Botón principal */
+  --color-brand-yellow-dark: #E6BF00;
+  /* Hover botón */
+  --color-brand-red: #E10600;
+  /* Botón secundario */
+  --color-brand-red-dark: #B50400;
+  /* Hover secundario */
 }
 
 @media (prefers-color-scheme: dark) {

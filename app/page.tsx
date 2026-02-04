@@ -1,65 +1,82 @@
 import Image from "next/image";
+import LocationCard from "@/components/LocationCard";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-charcoal font-[family-name:var(--font-geist-sans)] overflow-x-hidden">
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex flex-col justify-center items-center text-center p-4">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {/* IMAGEN O UN BACKGROUN CHIDO*/}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-yellow rounded-full blur-[150px] opacity-10 animate-pulse"></div>
+        </div>
+
+        <div className="z-10 relative space-y-6 max-w-4xl mx-auto">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-yellow-dark animate__animated animate__zoomIn">
+            LA COCINA <br className="sm:hidden" /> DE KOKE
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl sm:text-2xl text-gray-light max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+            Sabor auténtico y tradición en cada platillo. <br />
+            <span className="text-brand-yellow italic">¡La mejor comida de Vistas del Río!</span>
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate__animated animate__fadeInUp animate__delay-2s">
+            <button className="px-8 py-4 rounded-full bg-brand-yellow text-black font-bold text-lg hover:bg-brand-yellow-dark hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,212,0,0.5)] cursor-pointer">
+              ¡Pedir Ahora!
+            </button>
+            <button className="px-8 py-4 rounded-full bg-transparent border-2 border-brand-red text-brand-red font-bold text-lg hover:bg-brand-red hover:text-white hover:scale-105 transition-all cursor-pointer">
+              Ver Menú
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="absolute bottom-10 animate-bounce text-gray-light opacity-50">
+          <span className="text-sm">Descubre más</span>
+          <div className="text-2xl">⬇</div>
         </div>
-      </main>
+      </section>
+
+      {/* Locations Section */}
+      <section className="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 text-white animate__animated animate__fadeIn">
+          Nuestras <span className="text-brand-red underline decoration-brand-yellow">Sucursales</span>
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {/* Sede Principal */}
+          <LocationCard
+            title="La Cocina de Koke"
+            address="Vistas del norte 426, Vistas del Río, Juárez, N.L."
+            schedule={`Jueves a Domingo: 7:30 am - 11:30 pm\nMartes y Miércoles: 10:30 am - 8:00 pm`}
+            color="yellow"
+            delay="0.2s"
+          />
+
+          {/* Sucursal Tostadas */}
+          <LocationCard
+            title="Tostadas Koke"
+            address="Av. El Sabinal S/N, Col. Terranova (La Rotonda)"
+            schedule="Miércoles a Lunes: 11:30 am - 8:00 pm"
+            phone="8111650774"
+            color="red"
+            delay="0.4s"
+          />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-medium text-center relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-yellow via-brand-red to-brand-yellow"></div>
+        <div className="max-w-3xl mx-auto px-4 relative z-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">¿Qué se te antoja hoy?</h2>
+          <p className="text-gray-light mb-8 text-lg">No te quedes con el antojo. Ven y disfruta de lo mejor.</p>
+          <button className="px-10 py-4 rounded-full bg-brand-red text-white font-bold text-xl hover:bg-brand-red-dark hover:shadow-[0_0_30px_rgba(225,6,0,0.6)] transition-all transform hover:-translate-y-1 cursor-pointer">
+            Ordenar por WhatsApp
+          </button>
+        </div>
+      </section>
+
     </div>
   );
 }
