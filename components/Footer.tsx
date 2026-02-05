@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand Section */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-black text-white bg-clip-text text-transparent bg-gradient-to-r from-brand-yellow to-brand-red w-fit">
+                        <h3 className="text-2xl font-black text-white bg-clip-text bg-linear-to-r from-brand-yellow to-brand-red w-fit">
                             La Cocina de Koke
                         </h3>
                         <p className="text-gray-400 max-w-xs leading-relaxed">
@@ -27,7 +27,7 @@ export default function Footer() {
                                 Términos y Condiciones
                             </Link>
                             <Link href="/policies" className="hover:text-brand-yellow transition-colors w-fit">
-                                Políticas
+                                Política De Privacidad Y Tratamiento De Datos Personales
                             </Link>
                             <Link href="/privacy" className="hover:text-brand-yellow transition-colors w-fit">
                                 Avisos de Privacidad
@@ -52,7 +52,7 @@ export default function Footer() {
                                 href="https://www.instagram.com/lacocinadekoke?igsh=MXg3N2o4NDQyMTJwOA=="
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:scale-110 transition-all duration-300 shadow-lg"
+                                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-linear-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:scale-110 transition-all duration-300 shadow-lg"
                                 aria-label="Instagram"
                             >
                                 <Instagram size={24} />
