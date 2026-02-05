@@ -453,8 +453,7 @@
                 "id": "p2",
                 "name": "Paquete #2",
                 "price": 185,
-                "description": "1 tostada grande, 1 tostada junior, 2 tacos grandes.",
-                "image": "/productos/Pack2.png"
+                "description": "1 tostada grande, 1 tostada junior, 2 tacos grandes."
             },
             {
                 "id": "p3",

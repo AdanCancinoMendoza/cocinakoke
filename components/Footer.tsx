@@ -87,7 +87,7 @@ export default function Footer() {
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
                     <p>&copy; {new Date().getFullYear()} La Cocina de Koke. Todos los derechos reservados.</p>
                     <p className="flex items-center gap-1">
-                        Hecho con <span className="text-red-500 animate-pulse">❤</span> en Juárez, N.L.
+                        Hecho con <span className="text-red-500 animate-pulse">❤</span>
                     </p>
                 </div>
             </div>

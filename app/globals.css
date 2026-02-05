@@ -61,3 +61,19 @@ body {
   background-size: 200% 200%;
   animation: border-flow 3s ease infinite;
 }
+
+.bg-checker-red {
+  background-image: repeating-linear-gradient(45deg, #E10600 25%, transparent 25%, transparent 75%, #E10600 75%, #E10600), repeating-linear-gradient(45deg, #E10600 25%, #000000 25%, #000000 75%, #E10600 75%, #E10600);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  background-color: #000000;
+  opacity: 0.1;
+}
+
+.bg-checker-yellow {
+  background-image: repeating-linear-gradient(45deg, #FFD400 25%, transparent 25%, transparent 75%, #FFD400 75%, #FFD400), repeating-linear-gradient(45deg, #FFD400 25%, #000000 25%, #000000 75%, #FFD400 75%, #FFD400);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  background-color: #000000;
+  opacity: 0.1;
+}

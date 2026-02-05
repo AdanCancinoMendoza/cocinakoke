@@ -10,7 +10,6 @@ interface MenuItem {
     name: string;
     price: number;
     description: string;
-    image?: string;
 }
 
 interface CategoryGroup {
@@ -56,56 +55,58 @@ export default function PromotionsAndPackages() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="relative bg-white dark:bg-neutral-800 rounded-2xl shadow-lg border border-gray-100 dark:border-neutral-700 overflow-hidden hover:shadow-2xl transition-all group"
+                                        className={`relative bg-white dark:bg-neutral-800 rounded-xl shadow-md border-2 overflow-hidden hover:shadow-xl transition-all group flex flex-row h-48 ${group.category === "Paquetes" ? "border-brand-yellow" : "border-red-600"
+                                            }`}
                                     >
-                                        {/* Special Offer Badge - Corner */}
-                                        <div className="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl z-10 flex items-center gap-1 shadow-md">
+                                        <div className={`absolute inset-0 z-0 pointer-events-none ${group.category === "Paquetes" ? "bg-checker-yellow" : "bg-checker-red"
+                                            }`}></div>
+
+                                        <div className={`absolute top-0 left-0 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg z-20 flex items-center gap-1 shadow-sm ${group.category === "Paquetes" ? "bg-brand-yellow text-black" : "bg-red-600"
+                                            }`}>
                                             <Image
                                                 src={badgeIcon}
                                                 alt={badgeText}
-                                                width={20}
-                                                height={20}
-                                                className="brightness-0 invert"
+                                                width={14}
+                                                height={14}
+                                                className="object-contain brightness-0 invert"
                                             />
-                                            {badgeText}
+                                            <span>{badgeText}</span>
                                         </div>
 
-                                        {/* Product Image if available */}
-                                        {item.image && (
-                                            <div className="relative h-45 w-full bg-gray-100 dark:bg-gray-700 overflow-hidden">
-                                                <Image
-                                                    src={item.image}
-                                                    alt={item.name}
-                                                    fill
-                                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                                />
-                                                {/* Gradient overlay for better text contrast if needed, mostly aesthetic here */}
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            </div>
-                                        )}
 
-                                        <div className="p-6">
-                                            <div className="flex justify-between items-start mb-2 mt-4">
-                                                <h4 className="text-lg font-bold text-gray-900 dark:text-white leading-tight pr-8">
+                                        <div className="w-[35%] h-full relative bg-gray-100 dark:bg-black overflow-hidden z-10 border-r border-gray-200 dark:border-neutral-800">
+                                            <div className="w-full h-full flex items-center justify-center text-gray-300">
+                                                <span className="text-3xl">🍽️</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="w-[65%] p-3 flex flex-col justify-between relative z-10 bg-white/90 dark:bg-black backdrop-blur-sm">
+                                            {/* Header */}
+                                            <div className="mt-4">
+                                                <h4 className="text-base font-black text-gray-900 dark:text-white leading-tight mb-1 line-clamp-2">
                                                     {item.name}
                                                 </h4>
-                                                <span className="text-xl font-bold text-orange-600 block bg-orange-100 dark:bg-orange-900/30 px-2 py-1 rounded-lg">
-                                                    ${item.price}
-                                                </span>
+                                                <p className="text-gray-500 dark:text-gray-400 text-xs line-clamp-2 leading-snug">
+                                                    {item.description}
+                                                </p>
                                             </div>
 
-                                            <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 min-h-[3rem]">
-                                                {item.description}
-                                            </p>
-
-                                            <button className="w-full bg-gray-900 dark:bg-white text-white dark:text-black py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-orange-600 dark:hover:bg-gray-200 transition-colors group-hover:scale-[1.02] active:scale-95">
-                                                <span>Ordenar ahora</span>
-                                                <ShoppingCart size={18} />
-                                            </button>
+                                            {/* Footer: Price & Action */}
+                                            <div className="flex flex-col gap-2 mt-2">
+                                                <div className="flex items-center justify-between mt-auto">
+                                                    <span className={`text-lg font-black ${group.category === "Paquetes" ? "text-brand-yellow-dark" : "text-red-600"
+                                                        }`}>
+                                                        ${item.price}
+                                                    </span>
+                                                    <button className={`text-white py-1.5 px-4 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm transition-colors ${group.category === "Paquetes"
+                                                        ? "bg-black hover:bg-gray-800"
+                                                        : "bg-red-600 hover:bg-red-700"
+                                                        }`}>
+                                                        Pedir
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        {/* Decorative gradient line at bottom */}
-                                        <div className="h-1 w-full bg-gradient-to-r from-brand-yellow via-brand-red to-brand-yellow"></div>
                                     </motion.div>
                                 ))}
                             </div>
