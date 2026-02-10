@@ -37,11 +37,8 @@ export default function Home() {
             <span className="text-brand-yellow italic"> ¿Qué se te antoja hoy?</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate__animated animate__fadeInUp animate__delay-2s relative z-10">
-            <button className="px-8 py-4 rounded-full bg-brand-yellow text-black font-bold text-lg hover:bg-brand-yellow-dark hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,212,0,0.5)] cursor-pointer">
-              ¡Pedir Ahora!
-            </button>
-            <Link href="/menu" className="px-8 py-4 rounded-full bg-transparent border-2 border-brand-red text-brand-red font-bold text-lg hover:bg-brand-red hover:text-white hover:scale-105 transition-all cursor-pointer text-center flex items-center justify-center">
+          <div className="flex justify-center pt-8 animate__animated animate__fadeInUp animate__delay-2s relative z-10">
+            <Link href="/menu" className="px-12 py-5 rounded-full bg-brand-yellow text-black font-black text-xl hover:bg-brand-yellow-dark hover:scale-110 transition-all shadow-[0_0_30px_rgba(255,212,0,0.5)] cursor-pointer text-center flex items-center justify-center border-none">
               Ver Menú
             </Link>
           </div>
