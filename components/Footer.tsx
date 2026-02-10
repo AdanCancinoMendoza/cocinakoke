@@ -29,8 +29,8 @@ const Burger = ({ size = 24, className = "" }: { size?: number, className?: stri
 );
 
 const allIcons = [
-    Coffee, Sun, UtensilsCrossed, CookingPot, Drumstick,
-    Flame, Sandwich, Burger, Pizza, Package,
+    Coffee, Sun, CookingPot, Drumstick,
+    Flame, Sandwich, Pizza, Package,
     CupSoda, Sparkles, Star, ChefHat, Beef, Egg
 ];
 
@@ -38,7 +38,7 @@ export default function Footer() {
     const [icons, setIcons] = useState<{ id: number, x: number, duration: number, delay: number, size: number, Icon: any }[]>([]);
 
     useEffect(() => {
-        const newIcons = Array.from({ length: 10 }).map((_, i) => ({
+        const newIcons = Array.from({ length: 7 }).map((_, i) => ({
             id: i,
             x: Math.random() * 100,
             duration: 15 + Math.random() * 20,
@@ -68,7 +68,7 @@ export default function Footer() {
                             delay: icon.delay,
                             ease: "linear"
                         }}
-                        className="absolute top-0"
+                        className="absolute top-0 will-change-transform"
                         style={{ left: `${icon.x}%`, color: 'white' }}
                     >
                         <icon.Icon size={icon.size} strokeWidth={1} />
