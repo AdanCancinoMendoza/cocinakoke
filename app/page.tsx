@@ -33,8 +33,8 @@ export default function Home() {
             />
           </motion.div>
           <p className="text-xl sm:text-2xl text-gray-light max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s relative z-10">
-            Sabor auténtico y tradición en cada platillo. <br />
-            <span className="text-brand-yellow italic">¡La mejor comida de Vistas del Río!</span>
+            Estoy aquí para ayudarte a elegir tus platillos, resolver dudas y acompañarte hasta completar tu pedido. <br />
+            <span className="text-brand-yellow italic"> ¿Qué se te antoja hoy?</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate__animated animate__fadeInUp animate__delay-2s relative z-10">
@@ -52,15 +52,10 @@ export default function Home() {
           <div className="text-2xl">⬇</div>
         </div>
 
-        <div className="w-full z-10">
-          <PromotionsAndPackages />
-        </div>
-
-        {/* Random Product */}
-        <div className="w-full px-4 z-10">
-          <RandomProductShowcase />
-        </div>
       </section>
+
+      <PromotionsAndPackages />
+      <RandomProductShowcase />
 
       {/* Seccion de Sucursales */}
       <section className="py-20 px-4 sm:px-8 max-w-7xl mx-auto">

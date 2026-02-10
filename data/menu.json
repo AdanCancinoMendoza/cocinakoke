@@ -1,648 +1,869 @@
 [
     {
         "category": "Desayunos",
+        "icon": "Coffee",
         "items": [
             {
                 "id": "d1",
                 "name": "Mini Hotcakes 15 piezas",
                 "price": 40,
-                "description": "15 deliciosos mini hotcakes."
+                "description": "15 deliciosos mini hotcakes.",
+                "image": "/productos/desayunos/MINI_HOTCAKES_150_PZS.png",
+                "available": true
             },
             {
                 "id": "d2",
                 "name": "Mini Hotcakes 25 piezas",
                 "price": 80,
-                "description": "25 deliciosos mini hotcakes."
+                "description": "25 deliciosos mini hotcakes.",
+                "image": "/productos/desayunos/MINI_HOTCAKES_25_PZS.png",
+                "available": true
             },
             {
                 "id": "d3",
                 "name": "Hotcakes 3 piezas",
                 "price": 60,
-                "description": "3 hotcakes tradicionales esponjosos."
+                "description": "3 hotcakes tradicionales esponjosos.",
+                "image": "/productos/desayunos/HOTCAKES_3_PZS.png",
+                "available": true
             },
             {
                 "id": "d4",
                 "name": "Waffles 2 piezas",
                 "price": 40,
-                "description": "2 waffles doraditos."
+                "description": "2 waffles doraditos.",
+                "image": "/productos/desayunos/WAFLES_2_PZS.png",
+                "available": true
             },
             {
                 "id": "d5",
                 "name": "Waffles 4 piezas",
                 "price": 75,
-                "description": "4 waffles doraditos."
+                "description": "4 waffles doraditos.",
+                "image": "/productos/desayunos/WAFLES_4_PZS.png",
+                "available": true
             },
             {
                 "id": "d6",
                 "name": "Plato de fruta",
                 "price": 50,
-                "description": "300 gramos de fruta fresca de temporada."
+                "description": "300 gramos de fruta fresca de temporada.",
+                "image": "/productos/desayunos/FRUTAS.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Almuerzos",
+        "icon": "Sun",
         "items": [
             {
                 "id": "a1",
                 "name": "Molletes",
                 "price": 75,
-                "description": "Molletes clásicos con frijoles y queso."
+                "description": "Molletes clásicos con frijoles y queso.",
+                "image": "/productos/almuerzos/MOLLETE.png",
+                "available": true
             },
             {
                 "id": "a2",
                 "name": "Molletes con huevo",
                 "price": 90,
-                "description": "Molletes clásicos acompañados de huevo."
+                "description": "Molletes clásicos acompañados de huevo.",
+                "image": "/productos/almuerzos/MOLLETE_HUEVO.png",
+                "available": true
             },
             {
                 "id": "a3",
                 "name": "Chilaquiles con pollo",
                 "price": 95,
-                "description": "Chilaquiles verdes o rojos con pollo."
+                "description": "Chilaquiles verdes o rojos con pollo.",
+                "image": "/productos/almuerzos/CHILAQUILES_POLLO.png",
+                "available": true
             },
             {
                 "id": "a4",
                 "name": "Chilaquiles con huevo",
                 "price": 110,
-                "description": "Chilaquiles verdes o rojos con huevo."
+                "description": "Chilaquiles verdes o rojos con huevo.",
+                "image": "/productos/almuerzos/CHILAQUILES_HUEVO.png",
+                "available": true
             },
             {
                 "id": "a5",
                 "name": "Huevo con jamón",
                 "price": 75,
-                "description": "Huevos revueltos con jamón."
+                "description": "Huevos revueltos con jamón.",
+                "image": "/productos/almuerzos/HUEVO_JAMON.png",
+                "available": true
             },
             {
                 "id": "a6",
                 "name": "Huevo con salchicha",
                 "price": 75,
-                "description": "Huevos revueltos con salchicha."
+                "description": "Huevos revueltos con salchicha.",
+                "image": "/productos/almuerzos/HUEVO_CON_SALCHICHA.png",
+                "available": true
             },
             {
                 "id": "a7",
                 "name": "Huevo con tocino",
                 "price": 75,
-                "description": "Huevos revueltos con tocino crujiente."
+                "description": "Huevos revueltos con tocino crujiente.",
+                "image": "/productos/almuerzos/HUEVOS_T.png",
+                "available": true
             },
             {
                 "id": "a8",
                 "name": "Huevo a la mexicana",
                 "price": 75,
-                "description": "Huevos revueltos con tomate, cebolla y chile."
+                "description": "Huevos revueltos con tomate, cebolla y chile.",
+                "image": "/productos/almuerzos/HUEVO_MEXICANA.png",
+                "available": true
             },
             {
                 "id": "a9",
                 "name": "Huevos divorciados",
                 "price": 75,
-                "description": "Dos huevos estrellados, uno bañado en salsa verde y otro en salsa roja."
+                "description": "Dos huevos estrellados, uno bañado en salsa verde y otro en salsa roja.",
+                "image": "/productos/almuerzos/HUEVO_DIVORCIADO.png",
+                "available": true
             },
             {
                 "id": "a10",
                 "name": "Huevos estrellados",
                 "price": 75,
-                "description": "Huevos estrellados al gusto."
+                "description": "Huevos estrellados al gusto.",
+                "image": "/productos/almuerzos/HUEVO_E.png",
+                "available": true
             },
             {
                 "id": "a11",
                 "name": "Omelette",
                 "price": 75,
-                "description": "Omelette relleno de queso y jamón u otros ingredientes a elegir."
+                "description": "Omelette relleno de queso y jamón u otros ingredientes a elegir.",
+                "image": "/productos/almuerzos/OMMELETT.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Entradas",
+        "icon": "UtensilsCrossed",
         "items": [
             {
                 "id": "e1",
                 "name": "Papas a la francesa",
                 "price": 35,
-                "description": "Papas fritas corte clásico."
+                "description": "Papas fritas corte clásico.",
+                "image": "/productos/entradas/PAPAS.png",
+                "available": true
             },
             {
                 "id": "e2",
                 "name": "Papas a la francesa con queso",
                 "price": 45,
-                "description": "Papas fritas bañadas en queso amarillo."
+                "description": "Papas fritas bañadas en queso amarillo.",
+                "image": "/productos/entradas/PAPAS_Q.png",
+                "available": true
             },
             {
                 "id": "e3",
                 "name": "Papas Crisscut",
                 "price": 45,
-                "description": "Papas corte rejilla sazonadas."
+                "description": "Papas corte rejilla sazonadas.",
+                "image": "/productos/entradas/PAPAS_C.png",
+                "available": true
             },
             {
                 "id": "e4",
                 "name": "Papas Crisscut con queso",
                 "price": 55,
-                "description": "Papas Crisscut bañadas en queso."
+                "description": "Papas Crisscut bañadas en queso.",
+                "image": "/productos/entradas/PAPAS_Q_C.png",
+                "available": true
             },
             {
                 "id": "e5",
-                "name": "Consomé de ½",
-                "price": 25,
-                "description": "Medio litro de consomé de pollo."
-            },
-            {
-                "id": "e6",
-                "name": "Consomé de 1 Litro",
-                "price": 45,
-                "description": "Un litro de consomé de pollo."
+                "name": "Consomé de pollo",
+                "description": "Consomé de pollo caliente y reconfortante.",
+                "image": "/productos/entradas/CONSOMEE.png",
+                "variants": [
+                    {
+                        "name": "½ litro",
+                        "price": 25
+                    },
+                    {
+                        "name": "1 litro",
+                        "price": 45
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "e7",
                 "name": "Dedos de queso",
                 "price": 75,
-                "description": "Dedos de queso mozzarella empanizados."
+                "description": "Dedos de queso mozzarella empanizados.",
+                "image": "/productos/entradas/DEDOS.png",
+                "available": true
             },
             {
                 "id": "e8",
                 "name": "Aros de cebolla",
                 "price": 75,
-                "description": "Aros de cebolla empanizados y fritos."
+                "description": "Aros de cebolla empanizados y fritos.",
+                "image": "/productos/entradas/AROS_CEBOLLA.png",
+                "available": true
             },
             {
                 "id": "e9",
                 "name": "Koketopos",
                 "price": 80,
-                "description": "Totopos preparados especiales de la casa."
+                "description": "Totopos preparados especiales de la casa.",
+                "image": "/productos/entradas/KOKETOPOS.png",
+                "available": true
             },
             {
                 "id": "e10",
                 "name": "Jalapeño Popper",
                 "price": 75,
-                "description": "Chiles jalapeños rellenos de queso crema."
+                "description": "Chiles jalapeños rellenos de queso crema.",
+                "image": "/productos/entradas/JALAPEN.png",
+                "available": true
             },
             {
                 "id": "e11",
                 "name": "Nuggets de pollo",
                 "price": 75,
-                "description": "Nuggets de pollo crujientes."
+                "description": "Nuggets de pollo crujientes.",
+                "image": "/productos/entradas/NUGGETS.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Comidas",
+        "icon": "CookingPot",
         "items": [
             {
                 "id": "c1",
                 "name": "Enchiladas suizas",
                 "price": 95,
-                "description": "Enchiladas rellenas de pollo bañadas en salsa verde cremosa y gratinadas."
+                "description": "Enchiladas rellenas de pollo bañadas en salsa verde cremosa y gratinadas.",
+                "image": "/productos/comidas/ENCHILADAS.png",
+                "available": true
             },
             {
                 "id": "c2",
                 "name": "Enmoladas",
                 "price": 85,
-                "description": "Tortillas rellenas de pollo bañadas en mole."
+                "description": "Tortillas rellenas de pollo bañadas en mole.",
+                "image": "/productos/comidas/ENMOLADASS.png",
+                "available": true
             },
             {
                 "id": "c3",
                 "name": "Flautas",
                 "price": 85,
-                "description": "Tacos dorados largos de pollo o carne deshebrada."
+                "description": "Tacos dorados largos de pollo o carne deshebrada.",
+                "image": "/productos/comidas/FLAUTASS.png",
+                "available": true
             },
             {
                 "id": "c4",
                 "name": "Tacos dorados",
                 "price": 100,
-                "description": "Orden de tacos dorados crujientes."
+                "description": "Orden de tacos dorados crujientes.",
+                "image": "/productos/comidas/TACOS.png",
+                "available": true
             },
             {
                 "id": "c5",
                 "name": "Milanesa de pollo",
                 "price": 90,
-                "description": "Pechuga de pollo empanizada."
+                "description": "Pechuga de pollo empanizada.",
+                "image": "/productos/comidas/MILANESA.png",
+                "available": true
             },
             {
                 "id": "c6",
                 "name": "Chilaquiles verdes/rojos",
                 "price": 95,
-                "description": "Chilaquiles sencillos con guarnición."
+                "description": "Chilaquiles sencillos con guarnición.",
+                "image": "/productos/comidas/CHILAQUILES.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Boneless y Alitas",
+        "icon": "Drumstick",
         "items": [
             {
                 "id": "b1",
                 "name": "Boneless",
                 "price": 115,
-                "description": "Trozos de pechuga de pollo empanizados y bañados en salsa a elegir."
+                "description": "Trozos de pechuga de pollo empanizados y bañados en salsa a elegir.",
+                "image": "/productos/boneless/BONES.png",
+                "available": true
             },
             {
                 "id": "b2",
                 "name": "Alitas",
                 "price": 115,
-                "description": "Alitas de pollo fritas y bañadas en salsa a elegir."
+                "description": "Alitas de pollo fritas y bañadas en salsa a elegir.",
+                "image": "/productos/boneless/ALITAS.png",
+                "available": true
             },
             {
                 "id": "b3",
                 "name": "Palomitas de pollo",
                 "price": 75,
-                "description": "Bocaditos de pollo crujientes."
+                "description": "Bocaditos de pollo crujientes.",
+                "image": "/productos/boneless/PALOMITAS.png",
+                "available": true
             },
             {
                 "id": "b4",
                 "name": "Pa'l antojado",
                 "price": 115,
-                "description": "2 jalapeño Popper, 2 dedos de queso, 2 aros de cebolla, 2 boneless, 2 alitas, papas francesa, apio, zanahoria y ranch."
+                "description": "2 jalapeño Popper, 2 dedos de queso, 2 aros de cebolla, 2 boneless, 2 alitas, papas francesa, apio, zanahoria y ranch.",
+                "image": "/productos/boneless/PA.png",
+                "available": true
             },
             {
                 "id": "b5",
                 "name": "Pa'todos",
                 "price": 579,
-                "description": "Orden de boneless, alitas, aros, dedos de queso, jalapeño Popper, Nuggets, palomitas, papas crisscut 500g, papas francesa, 5 ranch, 5 salsas, apio y zanahoria."
+                "description": "Orden de boneless, alitas, aros, dedos de queso, jalapeño Popper, Nuggets, palomitas, papas crisscut 500g, papas francesa, 5 ranch, 5 salsas, apio y zanahoria.",
+                "image": "/productos/boneless/PA_TODOS.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Salsas",
+        "icon": "Flame",
         "items": [
             {
                 "id": "s1",
                 "name": "Mango",
                 "price": 0,
-                "description": "Salsa dulce de mango."
+                "description": "Salsa dulce de mango.",
+                "image": "/productos/salsas/MAN.png",
+                "available": true
             },
             {
                 "id": "s2",
                 "name": "Habanero",
                 "price": 0,
-                "description": "Salsa picante de habanero."
+                "description": "Salsa picante de habanero.",
+                "image": "/productos/salsas/HABANERO.png",
+                "available": true
             },
             {
                 "id": "s3",
                 "name": "Bufalo",
                 "price": 0,
-                "description": "Clásica salsa Búfalo picante."
+                "description": "Clásica salsa Búfalo picante.",
+                "image": "/productos/salsas/BUF.png",
+                "available": true
             },
             {
                 "id": "s4",
                 "name": "Chipotle",
                 "price": 0,
-                "description": "Salsa cremosa de chipotle."
+                "description": "Salsa cremosa de chipotle.",
+                "image": "/productos/salsas/CH.png",
+                "available": true
             },
             {
                 "id": "s5",
                 "name": "Valentina",
                 "price": 0,
-                "description": "Salsa Valentina."
+                "description": "Salsa Valentina.",
+                "image": "/productos/salsas/VALE.png",
+                "available": true
             },
             {
                 "id": "s6",
                 "name": "Lemon Pepper",
                 "price": 0,
-                "description": "Sazonador de limón y pimienta."
+                "description": "Sazonador de limón y pimienta.",
+                "image": "/productos/salsas/LEMON.png",
+                "available": true
             },
             {
                 "id": "s7",
                 "name": "BBQ",
                 "price": 0,
-                "description": "Salsa BBQ dulce y ahumada."
+                "description": "Salsa BBQ dulce y ahumada.",
+                "image": "/productos/salsas/BBQ.png",
+                "available": true
             },
             {
                 "id": "s8",
                 "name": "BBQ hot",
                 "price": 0,
-                "description": "Salsa BBQ con un toque picante."
+                "description": "Salsa BBQ con un toque picante.",
+                "image": "/productos/salsas/BBQH.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Tortas",
+        "icon": "Sandwich",
         "items": [
             {
                 "id": "t1",
                 "name": "Torta de pierna de puerco",
                 "price": 95,
-                "description": "Torta rellena de pierna de puerco adobada."
+                "description": "Torta rellena de pierna de puerco adobada.",
+                "image": "/productos/tortas/T_P.png",
+                "available": true
             },
             {
                 "id": "t2",
                 "name": "Torta de pollo",
                 "price": 90,
-                "description": "Torta rellena de pollo deshebrado o milanesa."
+                "description": "Torta rellena de pollo deshebrado o milanesa.",
+                "image": "/productos/tortas/T_PO.png",
+                "available": true
             },
             {
                 "id": "t3",
                 "name": "Torta de milanesa",
                 "price": 105,
-                "description": "Torta de milanesa de res o pollo."
+                "description": "Torta de milanesa de res o pollo.",
+                "image": "/productos/tortas/T_M.png",
+                "available": true
             },
             {
                 "id": "t4",
                 "name": "Torta de carnes frías",
                 "price": 95,
-                "description": "Torta con variedad de carnes frías."
+                "description": "Torta con variedad de carnes frías.",
+                "image": "/productos/tortas/T_CF.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Hamburguesas",
+        "icon": "Burger",
         "items": [
             {
                 "id": "h1",
                 "name": "Hamburguesa de sirloin",
                 "price": 80,
-                "description": "Carne de sirloin jugosa."
+                "description": "Carne de sirloin jugosa.",
+                "image": "/productos/burguers/B_S.png",
+                "available": true
             },
             {
                 "id": "h2",
                 "name": "Hamburguesa de pollo",
                 "price": 80,
-                "description": "Pechuga de pollo a la plancha o empanizada."
+                "description": "Pechuga de pollo a la plancha o empanizada.",
+                "image": "/productos/burguers/B_PP.png",
+                "available": true
             },
             {
                 "id": "h3",
                 "name": "Salchi-Burguer",
                 "price": 95,
-                "description": "Hamburguesa con salchicha asada."
+                "description": "Hamburguesa con salchicha asada.",
+                "image": "/productos/burguers/B_SA.png",
+                "available": true
             },
             {
                 "id": "h4",
                 "name": "Hamburguesa de boneless",
                 "price": 90,
-                "description": "Hamburguesa rellena de boneless bañados en salsa."
+                "description": "Hamburguesa rellena de boneless bañados en salsa.",
+                "image": "/productos/burguers/B_B.png",
+                "available": true
             },
             {
                 "id": "h5",
                 "name": "Hamburguesa de arrachera",
                 "price": 85,
-                "description": "Carne de arrachera suave y marinada."
+                "description": "Carne de arrachera suave y marinada.",
+                "image": "/productos/burguers/B_A.png",
+                "available": true
             },
             {
                 "id": "h6",
                 "name": "Hamburguesa minion",
                 "price": 105,
-                "description": "Hamburguesa tamaño especial o temática."
+                "description": "Hamburguesa tamaño especial o temática.",
+                "image": "/productos/burguers/B_MI.png",
+                "available": true
             },
             {
                 "id": "h7",
                 "name": "Tropi-Burguer",
                 "price": 100,
-                "description": "Hamburguesa con piña y jamón."
+                "description": "Hamburguesa con piña y jamón.",
+                "image": "/productos/burguers/B_T.png",
+                "available": true
             },
             {
                 "id": "h8",
                 "name": "Toci-Burguer",
                 "price": 95,
-                "description": "Hamburguesa con tocino extra."
+                "description": "Hamburguesa con tocino extra.",
+                "image": "/productos/burguers/B_TO.png",
+                "available": true
             },
             {
                 "id": "h9",
                 "name": "Koke-Burguer",
                 "price": 125,
-                "description": "La especial de la casa con doble carne y mix de quesos."
-            },
-            {
-                "id": "h10",
-                "name": "Agrega papas",
-                "price": 10,
-                "description": "Extra de papas a la francesa."
+                "description": "La especial de la casa con doble carne y mix de quesos.",
+                "image": "/productos/burguers/B_K.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Tostadas y Tacos Tipo Siberia",
+        "icon": "Pizza",
         "items": [
             {
                 "id": "ts1",
                 "name": "Tostada grande",
                 "price": 70,
-                "description": "Tostada con frijoles, pollo, crema, aguacate y salsa."
+                "description": "Tostada con frijoles, pollo, crema, aguacate y salsa.",
+                "image": "/productos/tostadas/TG.png",
+                "icon": "Star",
+                "available": true
             },
             {
                 "id": "ts2",
                 "name": "Tostada junior",
                 "price": 50,
-                "description": "Versión más pequeña de la tostada siberia."
+                "description": "Versión más pequeña de la tostada siberia.",
+                "icon": "Star",
+                "image": "/productos/tostadas/TJ.png",
+                "available": true
             },
             {
                 "id": "ts3",
                 "name": "Taco grande",
                 "price": 60,
-                "description": "Taco suave gigante con relleno siberia."
+                "description": "Taco suave gigante con relleno siberia.",
+                "icon": "Star",
+                "image": "/productos/tostadas/TT.png",
+                "available": true
             },
             {
                 "id": "ts4",
                 "name": "Taco junior",
                 "price": 45,
-                "description": "Taco suave tamaño normal."
+                "description": "Taco suave tamaño normal.",
+                "icon": "Star",
+                "image": "/productos/tostadas/TC.png",
+                "available": true
             },
             {
                 "id": "ts5",
                 "name": "Consomé ½ con pollo",
                 "price": 40,
-                "description": "Consomé con pollo deshebrado."
+                "description": "Consomé con pollo deshebrado.",
+                "image": "/productos/entradas/CONSOMEE.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Paquetes",
+        "icon": "Package",
         "items": [
             {
                 "id": "p1",
                 "name": "Paquete #1",
                 "price": 185,
-                "description": "3 tostadas grandes."
+                "description": "3 tostadas grandes.",
+                "image": "/productos/pak/P_1.png",
+                "available": true
             },
             {
                 "id": "p2",
                 "name": "Paquete #2",
                 "price": 185,
-                "description": "1 tostada grande, 1 tostada junior, 2 tacos grandes."
+                "description": "1 tostada grande, 1 tostada junior, 2 tacos grandes.",
+                "image": "/productos/pak/P_2.png",
+                "available": true
             },
             {
                 "id": "p3",
                 "name": "Paquete #3",
                 "price": 185,
-                "description": "2 tostadas grandes, 1 tostada junior, 1 taco junior."
+                "description": "2 tostadas grandes, 1 tostada junior, 1 taco junior.",
+                "image": "/productos/pak/P_3.png",
+                "available": true
             },
             {
                 "id": "p4",
                 "name": "Paquete #4",
                 "price": 185,
-                "description": "4 tacos grandes."
+                "description": "4 tacos grandes.",
+                "image": "/productos/pak/TGG.png",
+                "available": true
             },
             {
                 "id": "p5",
                 "name": "Paquete Junior",
                 "price": 185,
-                "description": "3 tostadas junior, 3 tacos junior."
+                "description": "3 tostadas junior, 3 tacos junior.",
+                "image": "/productos/pak/PE.png",
+                "available": true
             },
             {
                 "id": "p6",
                 "name": "Paquete Campeones",
                 "price": 325,
-                "description": "3 tostadas grandes, 3 tacos grandes, ½ litro de consomé."
+                "description": "3 tostadas grandes, 3 tacos grandes, ½ litro de consomé.",
+                "image": "/productos/pak/PK.png",
+                "available": true
             },
             {
                 "id": "p7",
                 "name": "Paquete Familiar",
                 "price": 345,
-                "description": "2 tostadas grandes, 2 tacos grandes, 2 tostadas junior, 2 tacos junior."
+                "description": "2 tostadas grandes, 2 tacos grandes, 2 tostadas junior, 2 tacos junior.",
+                "image": "/productos/pak/PC.png",
+                "available": true
             },
             {
                 "id": "p8",
                 "name": "Paquete futbolero",
                 "price": 319,
-                "description": "Taco grande, hamburguesa sirloin c/papas, tostada grande, torta pierna c/papas, 4 pepsis."
+                "description": "Taco grande, hamburguesa sirloin c/papas, tostada grande, torta pierna c/papas, 4 pepsis.",
+                "image": "/productos/pak/PP.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Extras",
+        "icon": "Sparkles",
         "items": [
             {
                 "id": "ex1",
                 "name": "Crema",
                 "price": 10,
-                "description": "Porción de crema."
+                "description": "Porción de crema.",
+                "image": "/productos/extras/CREMA.png",
+                "available": true
             },
             {
                 "id": "ex2",
                 "name": "Aguacate",
                 "price": 15,
-                "description": "Porción de aguacate."
+                "description": "Porción de aguacate.",
+                "image": "/productos/extras/ABOCADO.png",
+                "available": true
             },
             {
                 "id": "ex3",
                 "name": "Chile",
                 "price": 10,
-                "description": "Porción de chiles en vinagre o salsa."
+                "description": "Porción de chiles en vinagre o salsa.",
+                "image": "/productos/extras/BINA.png",
+                "available": true
             },
             {
                 "id": "ex4",
                 "name": "Pollo extra",
                 "price": 35,
-                "description": "Porción extra de pollo."
+                "description": "Porción extra de pollo.",
+                "image": "/productos/extras/POLLO.png",
+                "available": true
             },
             {
                 "id": "ex5",
                 "name": "Divorciados",
                 "price": 10,
-                "description": "Salsas extra para huevos divorciados."
+                "description": "Salsas extra para huevos divorciados.",
+                "image": "/productos/extras/CH.png",
+                "available": true
             }
         ]
     },
     {
         "category": "Bebidas",
+        "icon": "CupSoda",
         "items": [
             {
                 "id": "be1",
-                "name": "Licuado de fresa ½ litro",
-                "price": 40,
-                "description": "Licuado natural de fresa."
+                "name": "Licuado de fresa",
+                "description": "Licuado natural de fresa.",
+                "image": "/productos/bebidas/L_F.png",
+                "variants": [
+                    {
+                        "name": "½ litro",
+                        "price": 40
+                    },
+                    {
+                        "name": "1 litro",
+                        "price": 75
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "be2",
-                "name": "Licuado de fresa 1 litro",
-                "price": 75,
-                "description": "Licuado natural de fresa tamaño grande."
+                "name": "Licuado de plátano",
+                "description": "Licuado natural de plátano.",
+                "image": "/productos/bebidas/L_P.png",
+                "variants": [
+                    {
+                        "name": "½ litro",
+                        "price": 40
+                    },
+                    {
+                        "name": "1 litro",
+                        "price": 75
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "be3",
-                "name": "Licuado de plátano ½ litro",
-                "price": 40,
-                "description": "Licuado natural de plátano."
+                "name": "Licuado de chocolate",
+                "description": "Licuado de chocolate cremoso.",
+                "image": "/productos/bebidas/L_C.png",
+                "variants": [
+                    {
+                        "name": "½ litro",
+                        "price": 40
+                    },
+                    {
+                        "name": "1 litro",
+                        "price": 75
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "be4",
-                "name": "Licuado de plátano 1 litro",
-                "price": 75,
-                "description": "Licuado natural de plátano tamaño grande."
+                "name": "Pepsi",
+                "description": "Refresco Pepsi frío.",
+                "image": "/productos/bebidas/PE.png",
+                "variants": [
+                    {
+                        "name": "600 ml",
+                        "price": 30
+                    },
+                    {
+                        "name": "1.5 L",
+                        "price": 35
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "be5",
-                "name": "Café",
-                "price": 20,
-                "description": "Café americano caliente."
+                "name": "Be light",
+                "description": "Agua saborizada Be Light.",
+                "image": "/productos/bebidas/B.png",
+                "variants": [
+                    {
+                        "name": "1 L",
+                        "price": 30
+                    },
+                    {
+                        "name": "1.5 L",
+                        "price": 35
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "be6",
-                "name": "Licuado de chocolate ½ litro",
-                "price": 40,
-                "description": "Licuado de chocolate."
+                "name": "Café",
+                "price": 20,
+                "description": "Café americano caliente.",
+                "image": "/productos/bebidas/cafe.png",
+                "available": true
             },
             {
                 "id": "be7",
-                "name": "Licuado de chocolate 1 litro",
-                "price": 75,
-                "description": "Licuado de chocolate tamaño grande."
+                "name": "Agua",
+                "description": "Agua natural embotellada.",
+                "image": "/productos/bebidas/A.png",
+                "variants": [
+                    {
+                        "name": "1 L",
+                        "price": 25
+                    }
+                ],
+                "available": true
             },
             {
                 "id": "be8",
-                "name": "Pepsi 600 ml",
-                "price": 30,
-                "description": "Refresco Pepsi 600ml."
-            },
-            {
-                "id": "be9",
-                "name": "Pepsi 1.5 L",
-                "price": 35,
-                "description": "Refresco Pepsi 1.5 Litros."
-            },
-            {
-                "id": "be10",
-                "name": "Be light 1 L",
-                "price": 30,
-                "description": "Agua saborizada Be Light 1 Litro."
-            },
-            {
-                "id": "be11",
-                "name": "Be light 1.5 L",
-                "price": 35,
-                "description": "Agua saborizada Be Light 1.5 Litros."
-            },
-            {
-                "id": "be12",
-                "name": "Agua 1 L",
-                "price": 25,
-                "description": "Agua natural embotellada 1 Litro."
-            },
-            {
-                "id": "be13",
-                "name": "Jugos de caja 200 ml",
-                "price": 20,
-                "description": "Jugo de frutas en cajita."
+                "name": "Jugos de caja",
+                "description": "Jugo de frutas en cajita.",
+                "icon": "Box",
+                "image": "/productos/bebidas/J.png",
+                "variants": [
+                    {
+                        "name": "200 ml",
+                        "price": 20
+                    }
+                ],
+                "available": true
             }
         ]
     },
     {
         "category": "Promociones",
+        "icon": "TicketPercent",
         "items": [
             {
                 "id": "pr1",
                 "name": "Super promo de almuerzo",
                 "price": 120,
-                "description": "1 orden de huevitos al gusto, 15 mini hot cakes, café 16 oz."
+                "description": "1 orden de huevitos al gusto, 15 mini hot cakes, café 16 oz.",
+                "icon": "Sparkles",
+                "image": "/productos/promociones/1D.png",
+                "available": true
             },
             {
                 "id": "pr2",
                 "name": "Promo de tortas jueves",
                 "price": 245,
-                "description": "3 tortas por $245 (Jueves)."
+                "description": "3 tortas por $245 (Jueves).",
+                "image": "/productos/promociones/3tortas.png",
+                "available": true
             },
             {
                 "id": "pr3",
                 "name": "Super promo de lunes",
                 "price": 225,
-                "description": "3 hamburguesas de sirloin con papas (Lunes)."
+                "description": "3 hamburguesas de sirloin con papas (Lunes).",
+                "image": "/productos/promociones/H.png",
+                "available": true
             },
             {
                 "id": "pr4",
                 "name": "Super promo martes",
                 "price": 99,
-                "description": "Orden de boneless (Martes)."
+                "description": "Orden de boneless (Martes).",
+                "image": "/productos/promociones/B.png",
+                "available": true
             },
             {
                 "id": "pr5",
                 "name": "Promo Paquetes",
                 "price": 15,
-                "description": "En la compra de cualquier paquete +15 te llevas un consomé de ½ litro"
+                "description": "En la compra de cualquier paquete +15 te llevas un consomé de ½ litro",
+                "image": "/productos/entradas/CONSOMEE.png",
+                "available": true
             }
         ]
     }

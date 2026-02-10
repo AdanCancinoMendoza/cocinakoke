@@ -1,69 +1,161 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import menuData from "../data/menu.json";
-import { motion } from "framer-motion";
-import { ShoppingCart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ShoppingCart, RefreshCcw, Sparkles } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface MenuItem {
     id: string;
     name: string;
     price: number;
     description: string;
+    image?: string;
 }
 
 export default function RandomProductShowcase() {
     const [randomItems, setRandomItems] = useState<MenuItem[]>([]);
+    const [isRefreshing, setIsRefreshing] = useState(false);
+
+    const refreshItems = () => {
+        setIsRefreshing(true);
+        setTimeout(() => {
+            const allItems: MenuItem[] = (menuData as any)
+                .filter((c: any) => !["Salsas", "Extras", "Promociones", "Paquetes"].includes(c.category))
+                .flatMap((category: any) =>
+                    category.items
+                        .filter((item: any) => !["agua", "pepsi", "be light"].includes(item.name.toLowerCase()))
+                        .map((item: any) => ({
+                            ...item,
+                            price: item.price ?? item.variants?.[0]?.price ?? 0
+                        }))
+                );
+            const shuffled = [...allItems].sort(() => 0.5 - Math.random());
+            setRandomItems(shuffled.slice(0, 3));
+            setIsRefreshing(false);
+        }, 600);
+    };
 
     useEffect(() => {
-        const allItems: MenuItem[] = menuData.flatMap((category) => category.items);
-        const shuffled = allItems.sort(() => 0.5 - Math.random());
-        setRandomItems(shuffled.slice(0, 3)); // Show 3 random items
+        refreshItems();
     }, []);
 
+    if (randomItems.length === 0) return null;
+
     return (
-        <div className="py-12 bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-xl my-8">
-            <div className="text-center mb-8">
-                <h2 className="text-3xl sm:text-4xl font-black text-center mb-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
-                        ¿No sabes qué pedir?
-                    </span>
-                </h2>
-                <p className="text-gray-600 dark:text-gray-300 font-medium">
-                    Prueba alguna de nuestras recomendaciones del día
-                </p>
+        <section className="py-24 relative overflow-hidden bg-neutral-900">
+            {/* Background efectoss */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
-                {randomItems.map((item, index) => (
-                    <motion.div
-                        key={item.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-orange-100 dark:border-neutral-700"
-                    >
-                        <div className="h-40 bg-orange-100 dark:bg-neutral-700 rounded-md mb-4 flex items-center justify-center">
-                            <span className="text-4xl">🍽️</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-                            {item.name}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
-                            {item.description}
-                        </p>
-                        <div className="flex justify-between items-center">
-                            <span className="text-2xl font-bold text-orange-500">
-                                ${item.price}
+            <div className="max-w-7xl mx-auto px-4 relative z-10">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div className="max-w-2xl">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-black uppercase tracking-[0.2em] mb-4"
+                        >
+                            <Sparkles size={14} className="animate-pulse" />
+                            Selección del Chef
+                        </motion.div>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-4xl md:text-6xl font-black text-white leading-tight"
+                        >
+                            ¿No sabes qué pedir? <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-red-600">
+                                Prueba algo nuevo hoy
                             </span>
-                            <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors flex items-center gap-2">
-                                <span>Comprar</span>
-                                <ShoppingCart size={16} />
-                            </button>
-                        </div>
-                    </motion.div>
-                ))}
+                        </motion.h2>
+                    </div>
+
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={refreshItems}
+                        className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-black text-lg border border-white/10 backdrop-blur-md transition-all group"
+                    >
+                        <RefreshCcw size={20} className={`${isRefreshing ? 'animate-spin' : 'group-hover:rotate-180'} transition-transform duration-500 text-orange-500`} />
+                        Sugerir otros
+                    </motion.button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    <AnimatePresence mode="popLayout">
+                        {randomItems.map((item, index) => (
+                            <motion.div
+                                key={item.id}
+                                layout
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                transition={{ duration: 0.4, delay: index * 0.1 }}
+                                className="group relative"
+                            >
+                                {/* Card Glassmorphism */}
+                                <div className="h-full bg-white/[0.03] dark:bg-neutral-800/40 backdrop-blur-xl rounded-[2.5rem] p-8 border border-white/10 shadow-2xl transition-all duration-500 hover:bg-white/[0.07] hover:border-orange-500/30 flex flex-col">
+
+                                    {/* Image Container */}
+                                    <div className="relative h-56 w-full mb-8 rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transition-shadow duration-500">
+                                        {item.image ? (
+                                            <div className="relative w-full h-full p-6 transition-transform duration-700 group-hover:scale-110" onContextMenu={(e) => e.preventDefault()}>
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                    fill
+                                                    className="object-contain drop-shadow-2xl"
+                                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                                    draggable={false}
+                                                />
+                                                <div className="absolute inset-0 z-20 pointer-events-auto bg-transparent"
+                                                    onContextMenu={(e) => e.preventDefault()}
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="w-full h-full flex flex-col items-center justify-center text-neutral-700">
+                                                <Sparkles size={60} strokeWidth={1} />
+                                                <span className="text-[10px] font-black uppercase tracking-widest mt-4">Próximamente</span>
+                                            </div>
+                                        )}
+                                        {/* Price Tag Overlay */}
+                                        <div className="absolute top-4 right-4 bg-orange-500 text-white font-black px-4 py-2 rounded-2xl shadow-lg z-30">
+                                            ${item.price}
+                                        </div>
+                                    </div>
+
+                                    <div className="flex-1 flex flex-col">
+                                        <h3 className="text-2xl font-black text-white mb-3 group-hover:text-orange-400 transition-colors">
+                                            {item.name}
+                                        </h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed mb-8 line-clamp-3">
+                                            {item.description}
+                                        </p>
+
+                                        <div className="mt-auto">
+                                            <Link
+                                                href="/menu"
+                                                className="w-full inline-flex items-center justify-center gap-3 h-14 rounded-2xl bg-orange-500 hover:bg-orange-400 text-white font-black transition-all duration-500 transform hover:-translate-y-1.5 hover:scale-[1.02] active:scale-95 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40"
+                                            >
+                                                <ShoppingCart size={20} />
+                                                <span>Ver en Menú</span>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }

@@ -1,118 +1,134 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingCart } from "lucide-react";
+import { Tag, Sparkles, ChevronRight, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import menuData from "../data/menu.json";
+import Link from "next/link";
 
 interface MenuItem {
     id: string;
     name: string;
     price: number;
     description: string;
-}
-
-interface CategoryGroup {
-    category: string;
-    items: MenuItem[];
+    image?: string;
 }
 
 export default function PromotionsAndPackages() {
-    const promoData = menuData.filter((cat) => cat.category === "Promociones" || cat.category === "Paquetes");
+    const promoData = menuData.filter((cat) => cat.category === "Promociones");
 
     return (
-        <section className="py-16 max-w-7xl mx-auto px-4">
-            <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-black text-center mb-4 text-white">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
-                        Ofertas y Paquetes
-                    </span>
-                </h2>
-                <p className="text-xl text-gray-light">
-                    Disfruta de nuestras mejores promociones y combos familiares
-                </p>
+        <section className="py-24 relative overflow-hidden bg-neutral-900 border-b border-white/5">
+            <div className="absolute inset-0 z-0">
+                <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[130px] -translate-y-1/2 -translate-x-1/2" />
+                <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[130px] translate-y-1/2 translate-x-1/2" />
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
             </div>
 
-            <div className="space-y-16">
-                {promoData.map((group) => {
-                    // Iconos basados en la categoria
-                    const badgeIcon = group.category === "Paquetes"
-                        ? "/icons/combo-comida.png"
-                        : "/icons/oferta-especial.png";
+            <div className="max-w-7xl mx-auto px-4 relative z-10">
+                <div className="text-center mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-black uppercase tracking-[0.2em] mb-6"
+                    >
+                        <Tag size={14} />
+                        Ofertas Exclusivas
+                    </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-6xl font-black text-white mb-6"
+                    >
+                        Nuestras <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">Promociones</span>
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-xl text-gray-400 max-w-2xl mx-auto font-medium"
+                    >
+                        Disfruta de nuestras mejores promociones y especialidades preparadas para deleitar tu paladar.
+                    </motion.p>
+                </div>
 
-                    const badgeText = group.category === "Paquetes" ? "COMBO" : "OFERTA";
-
-                    return (
-                        <div key={group.category}>
-                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 border-l-4 border-brand-yellow pl-4">
-                                {group.category}
-                            </h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {group.items.map((item, index) => (
+                <div className="space-y-20">
+                    {promoData.map((group) => (
+                        <div key={group.category} className="space-y-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {(group.items as any[]).map((item, index) => (
                                     <motion.div
                                         key={item.id}
-                                        initial={{ opacity: 0, y: 20 }}
+                                        initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className={`relative bg-white dark:bg-neutral-800 rounded-xl shadow-md border-2 overflow-hidden hover:shadow-xl transition-all group flex flex-row h-48 ${group.category === "Paquetes" ? "border-brand-yellow" : "border-red-600"
-                                            }`}
+                                        className="group relative h-full"
                                     >
-                                        <div className={`absolute inset-0 z-0 pointer-events-none ${group.category === "Paquetes" ? "bg-checker-yellow" : "bg-checker-red"
-                                            }`}></div>
+                                        <div className="h-full bg-white/[0.03] backdrop-blur-xl rounded-[2.5rem] border border-white/10 overflow-hidden flex flex-col transition-all duration-500 hover:bg-white/[0.07] hover:border-red-500/30 hover:shadow-[0_20px_50px_rgba(220,38,38,0.15)]">
 
-                                        <div className={`absolute top-0 left-0 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg z-20 flex items-center gap-1 shadow-sm ${group.category === "Paquetes" ? "bg-brand-yellow text-black" : "bg-red-600"
-                                            }`}>
-                                            <Image
-                                                src={badgeIcon}
-                                                alt={badgeText}
-                                                width={14}
-                                                height={14}
-                                                className="object-contain brightness-0 invert"
-                                            />
-                                            <span>{badgeText}</span>
-                                        </div>
+                                            <div className="relative h-64 w-full bg-neutral-800/50 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
 
+                                                {item.image ? (
+                                                    <div className="relative w-full h-full" onContextMenu={(e) => e.preventDefault()}>
+                                                        <Image
+                                                            src={item.image}
+                                                            alt={item.name}
+                                                            fill
+                                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                                            draggable={false}
+                                                        />
+                                                        <div className="absolute inset-0 z-20 pointer-events-auto bg-transparent"
+                                                            onContextMenu={(e) => e.preventDefault()}
+                                                        />
+                                                    </div>
+                                                ) : (
+                                                    <div className="w-full h-full flex flex-col items-center justify-center text-neutral-600">
+                                                        <Sparkles size={48} strokeWidth={1} />
+                                                        <span className="text-[10px] font-black uppercase tracking-widest mt-2">Cocina Koke</span>
+                                                    </div>
+                                                )}
 
-                                        <div className="w-[35%] h-full relative bg-gray-100 dark:bg-black overflow-hidden z-10 border-r border-gray-200 dark:border-neutral-800">
-                                            <div className="w-full h-full flex items-center justify-center text-gray-300">
-                                                <span className="text-3xl">🍽️</span>
+                                                <div className="absolute bottom-6 left-6 bg-red-600 text-white font-black px-5 py-2 rounded-2xl shadow-xl z-20 flex items-center gap-1 scale-110">
+                                                    <span className="text-sm font-medium opacity-80">$</span>
+                                                    {item.price}
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div className="w-[65%] p-3 flex flex-col justify-between relative z-10 bg-white/90 dark:bg-black backdrop-blur-sm">
-                                            {/* Header */}
-                                            <div className="mt-4">
-                                                <h4 className="text-base font-black text-gray-900 dark:text-white leading-tight mb-1 line-clamp-2">
+                                            <div className="p-8 flex flex-col flex-1">
+                                                <h3 className="text-2xl font-black text-white mb-4 group-hover:text-red-400 transition-colors leading-tight">
                                                     {item.name}
-                                                </h4>
-                                                <p className="text-gray-500 dark:text-gray-400 text-xs line-clamp-2 leading-snug">
+                                                </h3>
+                                                <p className="text-gray-400 text-sm leading-relaxed mb-8 flex-1">
                                                     {item.description}
                                                 </p>
+
+                                                <Link
+                                                    href="/menu"
+                                                    className="inline-flex items-center justify-center gap-3 w-full h-14 rounded-2xl bg-white/5 hover:bg-red-600 text-white font-black transition-all duration-500 border border-white/10 hover:border-red-500 shadow-lg hover:shadow-red-500/25 hover:translate-y-[-6px] hover:scale-[1.02] active:scale-95"
+                                                >
+                                                    <ShoppingBag size={20} />
+                                                    <span>Pedir Promo</span>
+                                                    <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                                </Link>
                                             </div>
 
-                                            {/* Footer: Price & Action */}
-                                            <div className="flex flex-col gap-2 mt-2">
-                                                <div className="flex items-center justify-between mt-auto">
-                                                    <span className={`text-lg font-black ${group.category === "Paquetes" ? "text-brand-yellow-dark" : "text-red-600"
-                                                        }`}>
-                                                        ${item.price}
-                                                    </span>
-                                                    <button className={`text-white py-1.5 px-4 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm transition-colors ${group.category === "Paquetes"
-                                                        ? "bg-black hover:bg-gray-800"
-                                                        : "bg-red-600 hover:bg-red-700"
-                                                        }`}>
-                                                        Pedir
-                                                    </button>
-                                                </div>
+                                            {/* Decoration */}
+                                            <div className="absolute top-0 right-0 p-6 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <div className="w-12 h-12 rounded-full bg-red-500/20 blur-xl animate-pulse" />
                                             </div>
                                         </div>
                                     </motion.div>
                                 ))}
                             </div>
                         </div>
-                    );
-                })}
+                    ))}
+                </div>
             </div>
         </section>
     );
