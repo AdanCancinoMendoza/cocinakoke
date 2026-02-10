@@ -94,9 +94,10 @@ export default function PromotionsAndPackages() {
                                                     </div>
                                                 )}
 
-                                                <div className="absolute bottom-6 left-6 bg-red-600 text-white font-black px-5 py-2 rounded-2xl shadow-xl z-20 flex items-center gap-1 scale-110">
+                                                <div className="absolute bottom-6 left-6 bg-red-600 text-white font-black px-5 py-2 rounded-2xl shadow-xl z-20 flex items-center gap-1.5 scale-110">
                                                     <span className="text-sm font-medium opacity-80">$</span>
                                                     {item.price}
+                                                    <span className="text-[10px] font-bold opacity-70">MXN</span>
                                                 </div>
                                             </div>
 
@@ -108,14 +109,6 @@ export default function PromotionsAndPackages() {
                                                     {item.description}
                                                 </p>
 
-                                                <Link
-                                                    href="/menu"
-                                                    className="inline-flex items-center justify-center gap-3 w-full h-14 rounded-2xl bg-white/5 hover:bg-red-600 text-white font-black transition-all duration-500 border border-white/10 hover:border-red-500 shadow-lg hover:shadow-red-500/25 hover:translate-y-[-6px] hover:scale-[1.02] active:scale-95"
-                                                >
-                                                    <ShoppingBag size={20} />
-                                                    <span>Pedir Promo</span>
-                                                    <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                                                </Link>
                                             </div>
 
                                             {/* Decoration */}

@@ -127,8 +127,9 @@ export default function RandomProductShowcase() {
                                             </div>
                                         )}
                                         {/* Price Tag Overlay */}
-                                        <div className="absolute top-4 right-4 bg-orange-500 text-white font-black px-4 py-2 rounded-2xl shadow-lg z-30">
-                                            ${item.price}
+                                        <div className="absolute top-4 right-4 bg-orange-500 text-white font-black px-4 py-2 rounded-2xl shadow-lg z-30 flex items-center gap-1">
+                                            <span>${item.price}</span>
+                                            <span className="text-[10px] opacity-80">MXN</span>
                                         </div>
                                     </div>
 
@@ -140,15 +141,6 @@ export default function RandomProductShowcase() {
                                             {item.description}
                                         </p>
 
-                                        <div className="mt-auto">
-                                            <Link
-                                                href="/menu"
-                                                className="w-full inline-flex items-center justify-center gap-3 h-14 rounded-2xl bg-orange-500 hover:bg-orange-400 text-white font-black transition-all duration-500 transform hover:-translate-y-1.5 hover:scale-[1.02] active:scale-95 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40"
-                                            >
-                                                <ShoppingCart size={20} />
-                                                <span>Ver en Menú</span>
-                                            </Link>
-                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

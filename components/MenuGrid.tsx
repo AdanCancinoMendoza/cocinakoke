@@ -403,9 +403,10 @@ function MenuCard({ item, isSauce, onSelectVariants, onViewDetails }: { item: Me
                                     {hasVariants ? "Desde" : "Precio"}
                                 </span>
                             )}
-                            <span className={`${isSauce ? 'text-lg md:text-xl' : 'text-xl md:text-2xl'} font-black text-gray-900 dark:text-white flex items-center gap-0.5`}>
+                            <span className={`${isSauce ? 'text-lg md:text-xl' : 'text-xl md:text-2xl'} font-black text-gray-900 dark:text-white flex items-center gap-1`}>
                                 <span className="text-xs md:text-sm font-medium text-orange-600">$</span>
                                 {displayPrice}
+                                <span className="text-[10px] md:text-xs font-bold text-gray-400 dark:text-gray-500 ml-1">MXN</span>
                             </span>
                         </div>
 
@@ -417,18 +418,15 @@ function MenuCard({ item, isSauce, onSelectVariants, onViewDetails }: { item: Me
                         )}
                     </div>
 
-                    <button
-                        onClick={() => {
-                            if (hasVariants) {
-                                onSelectVariants?.(item);
-                            } else {
-                            }
-                        }}
-                        className={`${isSauce ? 'h-8 md:h-9 px-2 md:px-3 text-xs md:text-sm' : 'h-10 md:h-12 px-3 md:px-6 text-[12px] md:text-sm'} w-full bg-transparent text-gray-900 dark:text-white font-black rounded-xl md:rounded-2xl flex items-center justify-center gap-1.5 md:gap-2 border-2 border-orange-500 hover:bg-orange-500 hover:text-white hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 transform active:scale-95 shadow-lg hover:shadow-orange-500/40 group/btn`}
-                    >
-                        <ShoppingBag size={isSauce ? 12 : 16} className="md:size-[18px] group-hover/btn:rotate-[20deg] group-hover/btn:scale-110 transition-transform duration-500" />
-                        <span className="tracking-wide uppercase line-clamp-1">{hasVariants ? "Opciones" : "Pedir"}</span>
-                    </button>
+                    {hasVariants && (
+                        <button
+                            onClick={() => onSelectVariants?.(item)}
+                            className={`${isSauce ? 'h-8 md:h-9 px-2 md:px-3 text-xs md:text-sm' : 'h-10 md:h-12 px-3 md:px-6 text-[12px] md:text-sm'} w-full bg-transparent text-gray-900 dark:text-white font-black rounded-xl md:rounded-2xl flex items-center justify-center gap-1.5 md:gap-2 border-2 border-orange-500 hover:bg-orange-500 hover:text-white hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 transform active:scale-95 shadow-lg hover:shadow-orange-500/40 group/btn`}
+                        >
+                            <ShoppingBag size={isSauce ? 12 : 16} className="md:size-[18px] group-hover/btn:rotate-[20deg] group-hover/btn:scale-110 transition-transform duration-500" />
+                            <span className="tracking-wide uppercase line-clamp-1 text-xs">Opciones</span>
+                        </button>
+                    )}
                 </div>
             </div>
         </motion.div>
@@ -527,25 +525,22 @@ function ProductDetailsModal({ item, onClose, onSelectVariants }: { item: MenuIt
                             <span className="text-xs text-gray-400 dark:text-gray-500 font-bold uppercase tracking-widest mb-1">
                                 {hasVariants ? "Desde" : "Precio total"}
                             </span>
-                            <span className="text-4xl font-black text-gray-900 dark:text-white flex items-center gap-1">
+                            <span className="text-4xl font-black text-gray-900 dark:text-white flex items-center gap-1.5">
                                 <span className="text-xl font-medium text-orange-600">$</span>
                                 {displayPrice}
+                                <span className="text-sm font-bold text-gray-400 dark:text-gray-500">MXN</span>
                             </span>
                         </div>
 
-                        <button
-                            onClick={() => {
-                                if (hasVariants) {
-                                    onSelectVariants(item);
-                                } else {
-                                    onClose();
-                                }
-                            }}
-                            className="flex-1 bg-transparent border-2 border-orange-500 text-gray-900 dark:text-white h-16 rounded-3xl font-black text-lg flex items-center justify-center gap-3 hover:bg-orange-600 hover:text-white hover:-translate-y-1.5 hover:scale-[1.03] transition-all duration-500 transform active:scale-95 shadow-xl hover:shadow-orange-500/40"
-                        >
-                            <ShoppingBag size={24} />
-                            <span>{hasVariants ? "Ver Opciones" : "Pedir Ahora"}</span>
-                        </button>
+                        {hasVariants && (
+                            <button
+                                onClick={() => onSelectVariants(item)}
+                                className="flex-1 bg-transparent border-2 border-orange-500 text-gray-900 dark:text-white h-16 rounded-3xl font-black text-lg flex items-center justify-center gap-3 hover:bg-orange-600 hover:text-white hover:-translate-y-1.5 hover:scale-[1.03] transition-all duration-500 transform active:scale-95 shadow-xl hover:shadow-orange-500/40"
+                            >
+                                <ShoppingBag size={24} />
+                                <span>Ver Opciones</span>
+                            </button>
+                        )}
                     </div>
                 </div>
             </motion.div>
